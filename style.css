@@ -1,0 +1,22 @@
+/* Custom styles for the calendar */
+.day:hover {
+    background-color: #d1e7ff;
+    cursor: pointer;
+    border-radius: 0.5rem;
+  }
+  
+  .highlight {
+    background-color:red; /* Purple background  //#a78bfa*/ 
+    color: white; /* White text */
+    font-weight: bold;
+    border-radius:50%; /* Circular shape */
+    padding: 0.5rem; /* Adjust padding for a uniform shape */
+  }
+  
+  .event {
+    background-color: #fde68a;
+    color: #d97706;
+    border-radius: 0.375rem;
+    padding: 0.25rem;
+  }
+  

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Calendar</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-blue-200 to-purple-300 min-h-screen flex items-center justify-center">
+
+  <!-- Current date & time -->
+  <div class="calendar-container bg-white rounded-lg shadow-xl p-6 w-full max-w-lg">
+    <div class="text-center mb-4">
+      <h3 id="current-datetime" class="text-xl font-bold text-purple-600 mb-2"></h3>
+    </div>
+
+    <!-- Header for Month and Year selection -->
+    <div class="calendar-header flex items-center justify-between mb-4">
+      <button id="prev-month" class="text-purple-600 hover:text-purple-800 p-2">&lt;</button>
+      <div class="flex items-center space-x-2">
+        <select id="month-select" class="bg-purple-500 border border-gray-300 rounded-lg px-3 py-2 text-white font-semibold">
+        </select>
+        <select id="year-select" class="bg-purple-500 border border-gray-300 rounded-lg px-3 py-2 text-white font-semibold">
+        </select>
+      </div>
+      <button id="next-month" class="text-purple-600 hover:text-purple-800 p-2">&gt;</button>
+    </div>
+
+    <!-- Day names -->
+    <div class="day-names grid grid-cols-7 text-center font-semibold text-gray-500 mb-2">
+      <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+    </div>
+
+    <!-- Calendar days -->
+    <div id="calendar-days" class="calendar-days grid grid-cols-7 gap-2 text-center">
+    </div>
+  </div>
+
+  <!-- Event Modal -->
+  <div id="event-modal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg shadow-lg p-5 max-w-md w-full">
+      <h3 class="text-xl font-semibold text-purple-600 mb-4">Set Event</h3>
+      <input type="text" id="event-title" class="border border-gray-300 rounded-lg px-3 py-2 w-full mb-4" placeholder="Event title" />
+      <div class="flex justify-end">
+        <button id="close-modal" class="text-gray-500 hover:text-gray-700 mr-3">Cancel</button>
+        <button id="save-event" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
